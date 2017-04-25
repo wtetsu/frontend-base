@@ -1,12 +1,16 @@
+const webpack = require("webpack");
+
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: __dirname,
-    filename: "./dist/bundle.js"
+    filename: "./dist/app.js"
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ],  
   module: {
     loaders: [
-      {test: /\.css$/, loader: "style-loader!css-loader"}
     ]
   }
 };
