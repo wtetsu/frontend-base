@@ -7,10 +7,22 @@ module.exports = {
     filename: "./dist/app.js"
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin()
   ],  
   module: {
     loaders: [
+    ],
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["env"]
+          }
+        }
+      }
     ]
-  }
+  },
+  devtool: "source-map"
 };
