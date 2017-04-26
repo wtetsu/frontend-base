@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue example</title>
+</head>
+<body>
+<div id="app">
+  <input v-model="message">
+  <button v-on:click="addListItem">push me</button>
+  <p>{{ message }}</p>
+  <ol>
+    <li v-for="item in list" v-bind:key="item">{{item}}</li>
+  </ol>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
