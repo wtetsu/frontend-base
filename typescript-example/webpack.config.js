@@ -6,14 +6,20 @@ module.exports = {
     path: __dirname,
     filename: "./dist/app.js"
   },
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
   plugins: [
-  ],  
+  ],
+  devServer: {
+    contentBase: 'dist/',
+    historyApiFallback: true,
+    port: 3355,
+    hot: true
+  },
   module: {
     loaders: [
-    ],
-    rules: [
-      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+      { test: /\.tsx?$/, loader: 'ts-loader' }
     ]
   },
   devtool: "source-map"
