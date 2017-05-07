@@ -1,11 +1,11 @@
 import * as animal from "./animal";
-import * as dog from "./dog";
 import * as cat from "./cat";
+import * as dog from "./dog";
 
-let a = new animal.Animal("Something");
-let c = new dog.Dog("Pochi");
-let d = new cat.Cat("Tama");
+const anAnimal = new animal.Animal("Something");
+const aCat = new cat.Cat("Tama");
+const aDog = new dog.Dog("Pochi");
 
-a.say();
-c.say();
-d.say();
+anAnimal.say();
+aCat.say();
+aDog.say();

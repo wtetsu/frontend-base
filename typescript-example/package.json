@@ -7,6 +7,7 @@
   "devDependencies": {
     "source-map-loader": "^0.2.1",
     "ts-loader": "^2.0.3",
+    "tslint": "^5.2.0",
     "typescript": "^2.3.2",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
@@ -14,6 +15,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --progress",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "lint": "node_modules/.bin/tslint -c tslint.json src/*"
   }
 }
