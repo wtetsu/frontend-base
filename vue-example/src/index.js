@@ -1,13 +1,11 @@
-import Vue from "vue"
+import Vue from "vue";
 
 var data = {
     message: "hello!",
-    list: ["aaa", "bbb"]
+      list: ["aaa", "bbb"]
 };
 
-var a = [1,2,3].map((a) => a*a);
-
-var app = new Vue({
+new Vue({
   el: "#app",
   data: data,
   methods: {
