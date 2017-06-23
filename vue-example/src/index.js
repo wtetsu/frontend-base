@@ -1,8 +1,10 @@
-import Vue from "vue";
+import Vue from 'vue';
+import VueResource from 'vue-resource'
+Vue.use(VueResource);
 
 var data = {
-    message: "hello!",
-      list: ["aaa", "bbb"]
+  message: null,
+  list: null
 };
 
 new Vue({
@@ -12,5 +14,14 @@ new Vue({
       addListItem() {
           this.list.push(this.message);
       }
+  },
+  created: function(){
+    this.$http.get('data.json').then(responce => {
+      this.message = responce.body.message;
+      this.list = responce.body.list;
+    }, responce => {
+      // error
+      alert(responce.statusText);
+    });
   }
 });
