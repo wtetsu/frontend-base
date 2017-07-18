@@ -1,0 +1,9 @@
+{
+  "name": "browerify-example",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^14.4.0"
+  }
+}
