@@ -1,14 +1,12 @@
 # frontend-base
 
-frontend-base exmaples.
-
-This code is personal experimental purposes.
+The Codes and structure published here is just for personal experimental purpose.
 
 * Yarn
-* webpack
+* Webpack
 * TypeScript
 * Babel
 * Eslint
 * React
 * Vue
-
+* etc.
