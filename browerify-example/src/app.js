@@ -1,5 +1,10 @@
-let lib = require('./lib');
+let Page = require('./page');
 
+let page = new Page(document.getElementById('app'));
+page.add(new Date().toString());
+page.build();
 
-console.log(lib.plus(100, 200));
-console.log(lib.plus("ABC", "DEF"));
+document.getElementById('btnAdd').addEventListener('click', ()=>{
+  page.add(new Date().toString());
+  page.build();
+});

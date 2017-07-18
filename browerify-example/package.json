@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "main": "src/app.js",
   "license": "MIT",
+  "scripts": {
+    "build": "browserify src/app.js -o dist/bundle.js",
+    "watch": "watchify src/app.js -o dist/bundle.js -v"
+  },
+  "dependencies": {
+  },
   "devDependencies": {
-    "browserify": "^14.4.0"
+    "browserify": "^14.4.0",
+    "watchify": "^3.9.0"
   }
 }

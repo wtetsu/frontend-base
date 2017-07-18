@@ -1,7 +1,9 @@
 
 
 module.exports = {
-  plus: (a, b) => {
-    return a + b;
+  createElement: (tag, text) => {
+    let elem = document.createElement(tag);
+    elem.innerText = text;
+    return elem;
   }
 };
