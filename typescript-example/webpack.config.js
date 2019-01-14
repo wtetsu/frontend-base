@@ -7,20 +7,17 @@ module.exports = {
     filename: "./dist/app.js"
   },
   resolve: {
-    extensions: ['.ts', '.js']
+    extensions: [".ts", ".js"]
   },
-  plugins: [
-  ],
+  plugins: [],
   devServer: {
-    contentBase: 'dist/',
+    contentBase: "dist/",
     historyApiFallback: true,
     port: 3355,
     hot: true
   },
   module: {
-    loaders: [
-      { test: /\.tsx?$/, loader: 'ts-loader' }
-    ]
+    rules: [{ test: /\.tsx?$/, loader: "ts-loader" }]
   },
   devtool: "source-map"
 };
