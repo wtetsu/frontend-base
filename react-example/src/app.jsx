@@ -28,7 +28,7 @@ class HelloReact extends React.Component {
   buttonPushed(e) {
     const list = this.state.list.concat([]);
     list.push({
-      index: this.state.list.length,
+      index: list.length,
       text: this.state.inputText
     });
     this.setState({ list });
