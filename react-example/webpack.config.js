@@ -1,6 +1,5 @@
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-//const HtmlPlugin = require("html-webpack-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
 
