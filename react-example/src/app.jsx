@@ -14,22 +14,28 @@ class HelloReact extends React.Component {
     return (
       <div>
         <h1>Hello React!!</h1>
-        <input type="text" value={this.state.inputText} placeholder="write a comment..." onChange={this.changeText.bind(this)} />
+        <input
+          type="text"
+          value={this.state.inputText}
+          placeholder="write a comment..."
+          onChange={this.changeText.bind(this)}
+        />
         <button onClick={this.buttonPushed.bind(this)}>push me!</button>
         <ol>{list}</ol>
       </div>
     );
   }
   buttonPushed(e) {
-    this.state.list.push({
+    const list = this.state.list.concat([]);
+    list.push({
       index: this.state.list.length,
       text: this.state.inputText
     });
-    this.setState(this.state);
+    this.setState({ list });
   }
   changeText(e) {
-    this.state.inputText = e.target.value;
-    this.setState(this.state);
+    const inputText = e.target.value;
+    this.setState({ inputText });
   }
 }
 
