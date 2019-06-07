@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts" : {
-    "test": "node_modules/.bin/mocha"
+  "scripts": {
+    "test": "mocha"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.3.0",
-    "webpack": "^2.4.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.4.0"
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "webpack": "^4.33.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0"
   }
 }
